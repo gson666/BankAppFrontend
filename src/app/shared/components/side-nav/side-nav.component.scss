@@ -1,0 +1,54 @@
+.mat-sidenav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute items evenly */
+    background-color: #333; /* Dark background for sidenav */
+    color: #fff; /* White text for contrast */
+    width: 250px; /* Set a fixed width for the sidenav */
+    height: 100%; /* Full height */
+    padding: 0; /* Remove any padding that might create gaps */
+    box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.2); /* Shadow for better separation */
+  }
+  
+  .mat-nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spread items within the list */
+    flex-grow: 1; /* Ensure it takes up all available space */
+    margin: 0; /* Remove any margin */
+    padding: 10px 0; /* Add padding to avoid touching the edges */
+  }
+  
+  .mat-nav-list a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .mat-nav-list a:hover {
+    background-color: #555; /* Hover effect */
+  }
+  
+  .mat-nav-list a.active {
+    background-color: #1976d2; /* Active link color */
+    color: white;
+  }
+  
+  .mat-nav-list a .material-icons {
+    margin-right: 15px;
+    font-size: 20px;
+  }
+  
+  .footer {
+    padding: 15px 20px;
+    background-color: #444;
+    text-align: center;
+    color: #bbb;
+    font-size: 14px;
+    border-top: 1px solid #555;
+  }
+  

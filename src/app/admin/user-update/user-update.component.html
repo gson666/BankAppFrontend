@@ -1,0 +1,42 @@
+<div class="user-update-container" *ngIf="user">
+  <div class="user-card">
+    <h2 class="user-title">Update User Details</h2>
+    <form (ngSubmit)="updateUser()">
+      <div class="form-group">
+        <label for="userName">Username</label>
+        <input type="text" id="userName" [(ngModel)]="user.userName" name="userName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" [(ngModel)]="user.firstName" name="firstName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" [(ngModel)]="user.lastName" name="lastName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="user.email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="userImage">Profile Image URL</label>
+        <input type="text" id="userImage" [(ngModel)]="user.userImage" name="userImage">
+      </div>
+
+      <div class="form-group">
+        <label for="isDeleted">Active Status</label>
+        <label class="switch">
+          <input type="checkbox" id="isDeleted" [checked]="isActive" (change)="toggleUserActivation()">
+          <span class="slider round"></span>
+        </label>
+        <span>{{ isActive ? 'Active' : 'Inactive' }}</span>
+      </div>
+
+      <button type="submit" class="update-button">Update User</button>
+    </form>
+  </div>
+</div>

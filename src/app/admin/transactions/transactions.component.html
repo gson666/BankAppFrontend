@@ -1,0 +1,16 @@
+<h1>All Transactions</h1>
+<div class="transactions-container">
+  <mat-card *ngFor="let t of transactions" class="transaction-card">
+    <mat-card-content>
+      <p><strong>Transaction Id:</strong> {{t.transactionId}}</p>
+      <p><strong>Name:</strong> {{t.name}}</p>
+      <p><strong>Amount:</strong> {{t.amount | currency}}</p>
+      <p><strong>Date:</strong> {{t.createdDate | date:'medium'}}</p>
+      <p><strong>Payment Channel:</strong> {{t.paymentChannel}}</p>
+      <p><strong>Category:</strong> {{t.category}}</p>
+      <p><strong>Type:</strong> {{t.type}}</p>
+      <p><strong>Sender Identifier:</strong> {{t.senderAccountId}}</p>
+      <p><strong>Receiver Identifier:</strong> {{t.receiverAccountId}}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

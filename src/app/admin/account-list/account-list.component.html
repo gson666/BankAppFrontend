@@ -1,0 +1,29 @@
+<div class="table-container">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Account Name</th>
+        <th>Balance</th>
+        <th>Max Credit</th>
+        <th>Owner</th>
+        <th>Active</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let account of accounts">
+        <td>{{ account.name }}</td>
+        <td>{{ account.availableBalance | currency }}</td>
+        <td>{{ account.maxCredit | currency }}</td>
+        <td>{{ account.name }}</td>
+        <td [ngClass]="isAccountActive(account) ? 'active' : 'inactive'">
+          {{ isAccountActive(account) ? '🗸' : 'x' }}
+        </td>
+        <td>
+          <button class="view-button" (click)="viewAccountDetails(account.accountId)">View Account</button>
+          <button class="update-button" (click)="updateAccount(account.accountId)">Update</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

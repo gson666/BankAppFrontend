@@ -1,0 +1,35 @@
+<div *ngIf="account" class="account-update-container">
+    <div class="account-card">
+      <h3 class="account-title">Update Account Details</h3>
+      <form (ngSubmit)="updateAccount()">
+        <div class="form-group">
+          <label for="name">Account Name</label>
+          <input type="text" id="name" [(ngModel)]="account.name" name="name" class="form-control">
+        </div>
+  
+        <div class="form-group">
+          <label for="availableBalance">Available Balance</label>
+          <input type="number" id="availableBalance" [(ngModel)]="account.availableBalance" name="availableBalance" class="form-control" readonly>
+        </div>
+  
+        <div class="form-group">
+          <label for="maxCredit">Max Credit</label>
+          <input type="number" id="maxCredit" [(ngModel)]="account.maxCredit" name="maxCredit" class="form-control">
+        </div>
+  
+        <div class="form-group">
+          <label for="status">Account Status</label>
+          <div class="slider-container">
+            <label class="switch">
+              <input type="checkbox" [checked]="isActive" (change)="toggleAccountStatus()">
+              <span class="slider round"></span>
+            </label>
+            <span>{{ isActive ? 'Active' : 'Inactive' }}</span>
+          </div>
+        </div>
+  
+        <button type="submit" class="btn btn-primary">Update Account</button>
+      </form>
+    </div>
+  </div>
+  

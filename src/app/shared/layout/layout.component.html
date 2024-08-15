@@ -1,0 +1,14 @@
+<!-- <app-header></app-header>
+<app-side-nav></app-side-nav>
+<router-outlet></router-outlet> -->
+
+
+<app-header></app-header>
+<mat-sidenav-container class="layout-container">
+  <mat-sidenav mode="side" opened>
+    <app-side-nav></app-side-nav> <!-- Sidenav content -->
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet> <!-- Main content -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

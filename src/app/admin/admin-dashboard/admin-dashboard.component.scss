@@ -1,0 +1,55 @@
+/* container to hold the boxes */
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: self-start; 
+    height: 350px; /* Full viewport height */
+    padding: 20px;
+    background-color: #fdfdfd;
+  }
+  
+  /* flex container to align boxes side by side */
+  .box-container {
+    display: flex;
+    justify-content: center; /* Align items to the start */
+    gap: 20px; /* Gap between the boxes */
+  }
+  
+  /* individual box styling */
+  .box {
+    background-color: #fdfdfd;
+    padding: 15px; /* Padding inside the box */
+    border-radius: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Equal space for each box */
+    max-width: 180px; /* Max width of each box */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* header styling for the box */
+  mat-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the icon and text */
+    gap: 8px; /* Space between the icon and the text */
+    font-size: 1.1rem; /* Font size for header */
+  }
+  
+  /* icon styling within the card */
+  .card-icon {
+    font-size: 28px; /* Icon size */
+    color: #1976d2; /* Primary color for icons */
+  }
+  
+  /* number styling within the card */
+  .card-number {
+    font-size: 24px; /* Font size for the numbers */
+    font-weight: bold; /* Bold font for emphasis */
+    margin: 10px 0 0 0; /* Margin on top */
+    color: #333; /* Darker color for contrast */
+  }
+  

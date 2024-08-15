@@ -1,0 +1,18 @@
+.layout-container {
+    height: calc(100vh - 64px); /* Full height minus the header */
+    margin-top: 64px; /* This aligns with the height of your header */
+    display: flex;
+    background-color: #fdfdfd; /* Set background for the layout */
+  }
+  
+  mat-sidenav-container {
+    height: 100%;
+    width: 100%; /* Ensure it takes up the full width */
+  }
+  
+  mat-sidenav-content {
+    flex-grow: 1; /* Ensure the content takes up the remaining space */
+    padding: 20px;
+    overflow: auto; /* Allow scrolling if content overflows */
+  }
+  

@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+/* styles.scss */
+
+/* Import a modern font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+html, body, app-root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4; /* Light gray background for a clean look */
+}
+
+.mat-toolbar {
+  background-color: #1976d2; /* Primary blue color */
+  color: white;
+}
+
+.mat-sidenav {
+  background-color: #ffffff; /* White sidenav for a clean look */
+  color: #444; /* Dark gray text */
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.mat-nav-list a {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 15px 20px;
+  color: #444; /* Dark gray for links */
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.mat-nav-list a:hover {
+  background-color: #eeeeee; /* Light gray hover effect */
+}
+
+.mat-nav-list a.active {
+  background-color: #1976d2; /* Highlight active link */
+  color: white;
+}
+
+.container {
+  padding: 20px;
+  background-color: white; /* White background for content */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.mat-dialog-container {
+  z-index: 0 !important; 
+}
+body {
+  overflow: visible !important; 
+}
+body.mat-dialog-open {
+  overflow: hidden;
+}
+
+/* Ensure background content is not interactable */
+.cdk-overlay-backdrop {
+  z-index: 1040; /* Ensure it is above other elements */
+  background-color: rgba(0, 0, 0, 0.5); /* Darken the background */
+}
+
+/* Ensure dialog container has the highest z-index */
+.mat-dialog-container {
+  z-index: 1050;
+}

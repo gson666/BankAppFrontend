@@ -1,0 +1,120 @@
+/* Outer container styling */
+.outer {
+    height: 100vh;
+    background: url('https://img.freepik.com/free-vector/digital-rupee-technology-background-design_1017-36659.jpg?size=626&ext=jpg') center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Panel styling */
+.panel {
+    min-height: 380px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    margin-top: 6px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85); /* Slight transparency */
+}
+
+/* Panel heading styling */
+.panel-heading {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Form input styling */
+.input-field {
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:hover,
+.input-field:focus-within {
+    border-color: #3d0dc2;
+}
+
+.input-field.error {
+    border: 1px solid red;
+    color: red;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background: transparent;
+    color: #333;
+}
+
+.fa-eye-slash.btn {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+/* Button styling */
+.btn {
+    margin-top: 60px;
+    border-radius: 20px;
+    width: 100px;
+    background-color: #e28307;
+    border: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 100px;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #4513a1;
+}
+
+/* Utility classes */
+.text-danger {
+    color: red;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.form-inline label {
+    padding-left: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+}
+
+.filter-select {
+    width: 150px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.red {
+    color: red;
+}

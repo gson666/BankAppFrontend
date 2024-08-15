@@ -1,0 +1,24 @@
+<div *ngIf="user" class="profile-container">
+  <div class="profile-card">
+    <img [src]="user.userImage" alt="{{ user.userName }}" class="profile-image">
+    <div class="profile-details">
+      <h3>{{ user.userName }}</h3>
+      <p><strong>First Name:</strong> {{ user.firstName }}</p>
+      <p><strong>Last Name:</strong> {{ user.lastName }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Accounts Owned:</strong> {{ accountCount }}</p>
+    </div>
+  </div>
+
+  <div *ngIf="accounts.length > 0; else noAccounts">
+    <h4>Accounts owned by {{ user.userName }}:</h4>
+    <ul *ngFor="let account of accounts">
+      <li >
+       Account Identifier: <strong>{{account.accountId}}</strong>  - Account Name: {{ account.name }} - Balance: {{ account.availableBalance | currency }}
+      </li>
+    </ul>
+  </div>
+  <ng-template #noAccounts>
+    <p>{{ message }}</p>
+  </ng-template>
+</div>

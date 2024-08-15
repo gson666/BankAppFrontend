@@ -1,0 +1,24 @@
+<div>
+    <div class="box-container">
+      <mat-card class="box" (click)="navigateToAccounts()">
+        <mat-card-header>
+          <mat-icon class="card-icon">account_balance</mat-icon>
+          <span>Total Accounts</span>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="card-number">{{ accounts }}</p>
+        </mat-card-content>
+      </mat-card>
+  
+      <mat-card class="box" (click)="navigateToUsers()">
+        <mat-card-header>
+          <mat-icon class="card-icon">people</mat-icon>
+          <span>Total Users</span>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="card-number">{{ users }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  

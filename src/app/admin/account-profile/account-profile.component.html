@@ -1,0 +1,25 @@
+<div *ngIf="account" class="account-profile-container">
+  <div class="account-card">
+    <h3 class="account-title">Account Details</h3>
+    <div class="account-info">
+      <p><strong>Account Name:</strong> {{ account.name }}</p>
+      <p><strong>Account Balance:</strong> {{ account.availableBalance | currency }}</p>
+      <p><strong>Account Max Credit:</strong> {{ account.maxCredit | currency }}</p>
+      <p><strong>Active :</strong> {{ showAccountActive() }}</p>
+    </div>
+
+    <div *ngIf="owner" class="owner-info">
+      <h4 class="owner-title">Account Owner:</h4>
+      <div class="owner-details">
+        <img [src]="owner.userImage" alt="{{ owner.userName }}" class="owner-image" />
+        <div>
+          <p><strong>{{ owner.firstName }} {{ owner.lastName }}</strong></p>
+          <p>{{ owner.userName }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
